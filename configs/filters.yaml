@@ -2,6 +2,7 @@ filters:
   - min_level: 10
     max_level: 12
     server: "ORIEN"
+    quests: []
   - min_level: 2
     max_level: 5
-    servier: "ORIEN"
+    server: "ORIEN"

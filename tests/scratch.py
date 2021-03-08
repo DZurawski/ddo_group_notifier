@@ -1,16 +1,17 @@
 """
 """
 
-import time
+import os
+import sys
+import logging
+import plyer
 
-from infi.systray import SysTrayIcon
+import test_utils
 
+# Add the project root path to the system path.
+test_utils.add_to_sys_path(test_utils.get_project_root())
 
-def say_hello(_):
-    print("Hello, World!")
+from ddo_group_notifier import utils
+from ddo_group_notifier import notifier
 
-
-menu_options = (("Say Hello", None, say_hello),)
-
-with SysTrayIcon(None, "Hi", menu_options) as systray:
-    time.sleep(10)
+notifier.notify()
