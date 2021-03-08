@@ -1,8 +1,40 @@
+# The filters list is a list of filters that you can apply to your group search.
+# Each element in the list is a dictionary of conditions that must be fulfilled
+# for this tool to notify you of the group.
+#
+# Filters work like this: 
+# The tool will notify you of a group if the group fulfills (all conditions
+# in Filter 1) OR (all conditions in Filter 2) OR (all conditions in Filter 3)
+# and so on.
+#
+# Values:
+# character_level: int
+# min_base_quest_level: int
+# max_base_quest_level: int
+# server: str
+# quests: List[str]
+# difficulties: List[str] (One of: "Normal", "Hard", "Elite", "Reaper)
+
+# The server you are on.
+server: "ORIEN"
+
 filters:
-  - min_level: 10
-    max_level: 12
-    server: "ORIEN"
+  # Filter 1
+    # The level of your character.
+  - character_level: 15
+    
+    # The minimum base quest level that you would be willing to join.
+    min_base_quest_level: 1
+    
+    # the maximum base quest level that you would be willing to join.
+    max_base_quest_level: 30
+        
+    # A set of quests that you would be willing to join.
+    # Leave this as an empty list if there are no particular quests you want.
     quests: []
-  - min_level: 2
-    max_level: 5
-    server: "ORIEN"
+    
+    # The difficulties that you would be willing to join.
+    difficulties:
+      - "Elite"
+      - "Reaper"
+    

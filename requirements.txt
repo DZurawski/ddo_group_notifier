@@ -1,0 +1,4 @@
+plyer~=2.0.0
+PyYAML~=5.4.1
+requests==2.25.1
+infi.systray==0.1.12

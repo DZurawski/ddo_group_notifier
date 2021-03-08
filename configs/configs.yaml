@@ -1,13 +1,15 @@
-# The name of this app.
+# The name of this app. (str)
 app_name: "DDO Group Notifier"
 
-# How often to check DDO groups for group information in seconds.
-query_seconds_gap: 8.0
+# How often to check DDO groups for group information in seconds. (float)
+# !!! NOTE: PLEASE SET THIS AS ABOVE 30 SECONDS !!!
+# The program gets its data using the DDO Audit API and they requested that data pulls be done at least 30 seconds apart.
+query_seconds_gap: 45.0
 
-# How long to display notifications in seconds.
-# TODO: For some reason, this variable is not affecting the gap on Windows 10.
+# How long to display notifications in seconds. (float)
+# Currently broken: for some reason, this variable is not affecting the gap on Windows 10.
 display_seconds_gap: 10.0
 
-# The level of verbosity for the logging messages.
+# The level of verbosity for the logging messages. (str)
 # ("DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL").
 logging_verbosity: "DEBUG"
